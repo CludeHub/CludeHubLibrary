@@ -19,7 +19,7 @@ local OrionLib = {
 			Stroke = Color3.fromRGB(60, 60, 60),
 			Divider = Color3.fromRGB(60, 60, 60),
                         Border = Color3.fromRGB(0, 0, 255),
-                        BorderSizePixel = 4,
+                        BorderSizePixel = 8,
 			Text = Color3.fromRGB(240, 240, 240),
 			TextDark = Color3.fromRGB(150, 150, 150)
 		}
@@ -300,7 +300,8 @@ end)
 CreateElement("Frame", function(Color)
 	local Frame = Create("Frame", {
 		BackgroundColor3 = Color or Color3.fromRGB(255, 255, 255),
-		BorderSizePixel = 1
+                BorderColor3 = Color or Color3.fromRGB(0, 0, 255),
+		BorderSizePixel = 4
 	})
 	return Frame
 end)
@@ -308,7 +309,8 @@ end)
 CreateElement("RoundFrame", function(Color, Scale, Offset)
 	local Frame = Create("Frame", {
 		BackgroundColor3 = Color or Color3.fromRGB(255, 255, 255),
-		BorderSizePixel = 1
+                BorderColor3 = Color or Color3.fromRGB(0, 0, 255),
+		BorderSizePixel = 4
 	}, {
 		Create("UICorner", {
 			CornerRadius = UDim.new(Scale, Offset)
@@ -321,7 +323,7 @@ CreateElement("Button", function()
 	local Button = Create("TextButton", {
 		Text = "",
 		AutoButtonColor = false,
-		BackgroundTransparency = 1,
+		BackgroundTransparency = 0,
                 BorderColor3 = Color3.fromRGB(0, 0, 255),
 		BorderSizePixel = 4
 	})
