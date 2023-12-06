@@ -16,8 +16,6 @@ local OrionLib = {
 		Default = {
 			Main = Color3.fromRGB(25, 25, 25),
 			Second = Color3.fromRGB(32, 32, 32),
-                        BorderColor3 = Color3.fromRGB(0, 0, 255),
-                        BorderSizePixel = 5
 			Stroke = Color3.fromRGB(60, 60, 60),
 			Divider = Color3.fromRGB(60, 60, 60),
 			Text = Color3.fromRGB(240, 240, 240),
@@ -322,8 +320,7 @@ CreateElement("Button", function()
 		Text = "",
 		AutoButtonColor = false,
 		BackgroundTransparency = 1,
-                BorderColor3 = Color3.fromRGB(0, 0, 255),
-		BorderSizePixel = 5
+		BorderSizePixel = 0
 	})
 	return Button
 end)
@@ -1766,4 +1763,4 @@ function OrionLib:Destroy()
 	Orion:Destroy()
 end
 
-return Orionlib
+return Orionlib 
