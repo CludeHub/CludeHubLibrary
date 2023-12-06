@@ -18,6 +18,7 @@ local OrionLib = {
 			Second = Color3.fromRGB(32, 32, 32),
 			Stroke = Color3.fromRGB(60, 60, 60),
 			Divider = Color3.fromRGB(60, 60, 60),
+                        Border = Color3.fromRGB(0, 0, 255),
 			Text = Color3.fromRGB(240, 240, 240),
 			TextDark = Color3.fromRGB(150, 150, 150)
 		}
@@ -264,7 +265,7 @@ end)
 
 CreateElement("Stroke", function(Color, Thickness)
 	local Stroke = Create("UIStroke", {
-		Color = Color or Color3.fromRGB(0, 0, 255),
+		Color = Color or Color3.fromRGB(255, 255, 255),
 		Thickness = Thickness or 1
 	})
 	return Stroke
@@ -298,7 +299,6 @@ end)
 CreateElement("Frame", function(Color)
 	local Frame = Create("Frame", {
 		BackgroundColor3 = Color or Color3.fromRGB(255, 255, 255),
-    BorderColor3 = Color3.fromRGB(0, 0, 255)
 		BorderSizePixel = 1
 	})
 	return Frame
@@ -307,7 +307,6 @@ end)
 CreateElement("RoundFrame", function(Color, Scale, Offset)
 	local Frame = Create("Frame", {
 		BackgroundColor3 = Color or Color3.fromRGB(255, 255, 255),
-    BorderColor3 = Color3.fromRGB(0, 0, 255)
 		BorderSizePixel = 1
 	}, {
 		Create("UICorner", {
@@ -322,7 +321,7 @@ CreateElement("Button", function()
 		Text = "",
 		AutoButtonColor = false,
 		BackgroundTransparency = 1,
-		BorderSizePixel = 0
+		BorderSizePixel = 1
 	})
 	return Button
 end)
@@ -334,7 +333,7 @@ CreateElement("ScrollFrame", function(Color, Width)
 		BottomImage = "rbxassetid://7445543667",
 		TopImage = "rbxassetid://7445543667",
 		ScrollBarImageColor3 = Color,
-		BorderSizePixel = 0,
+		BorderSizePixel = 1,
 		ScrollBarThickness = Width,
 		CanvasSize = UDim2.new(0, 0, 0, 0)
 	})
