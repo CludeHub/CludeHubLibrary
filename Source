@@ -15,8 +15,10 @@ local OrionLib = {
 	Themes = {
 		Default = {
 			Main = Color3.fromRGB(25, 25, 25),
-			Second = Color3.fromRGB(32, 32, 32),
+			Second = Color3.fromRGB(25, 25, 25),
 			Stroke = Color3.fromRGB(60, 60, 60),
+                        BorderColor3 = Color3.fromRGB(0, 0, 255),
+                        BorderSizePixel = 4,
 			Divider = Color3.fromRGB(60, 60, 60),
 			Text = Color3.fromRGB(240, 240, 240),
 			TextDark = Color3.fromRGB(150, 150, 150)
@@ -108,7 +110,7 @@ local function MakeDraggable(DragPoint, Main)
 
 				Input.Changed:Connect(function()
 					if Input.UserInputState == Enum.UserInputState.End then
-						Dragging = false
+						Dragging = true
 					end
 				end)
 			end
@@ -298,7 +300,7 @@ end)
 CreateElement("Frame", function(Color)
 	local Frame = Create("Frame", {
 		BackgroundColor3 = Color or Color3.fromRGB(255, 255, 255),
-		BorderSizePixel = 0
+		BorderSizePixel = 5
 	})
 	return Frame
 end)
